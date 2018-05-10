@@ -5,4 +5,3 @@
 layout: index
 title: Baltimore Black Techies
 ---
-
