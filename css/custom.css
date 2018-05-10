@@ -1,7 +1,29 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  flex-shrink: 0;
+}
+
+
+.container {
+  flex: 1 0 auto;
+}
+
 header.masthead {
   background: url(../img/bbt.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+footer.footer {
+  flex-shrink: 0;
 }
