@@ -16,13 +16,13 @@ title: Baltimore Black Techies
 
       </div>
       <div class="col-md-9 col-lg-8 col-xl-7 mx-auto">
-	<form>
+	<form method="POST" action="https://formspree.io/y9j4c5m0l3h7y3z5@bmoreblacktechies.slack.com">
 	  <div class="form-row">
 	    <div class="col-12 col-md-9 mb-2 mb-md-0">
-	      <input type="email" class="form-control form-control-lg" placeholder="Your email here...">
+	      <input type="email" class="form-control form-control-lg" placeholder="Your email here..." required pattern="[A-Za-z_\-0-9\.]+@[A-Za-z_\-0-9\.]+\.[A-Za-z_\-0-9\.]+">
 	    </div>
 	    <div class="col-12 col-md-3">
-	      <button type="submit" class="btn btn-block btn-lg btn-primary disabled">Join us!</button>
+	      <button type="submit" class="btn btn-block btn-lg btn-primary" disabled>Join us!</button>
 	    </div>
 	  </div>
 	</form>
