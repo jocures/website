@@ -22,7 +22,7 @@ title: Baltimore Black Techies
 	      <input type="email" class="form-control form-control-lg" placeholder="Your email here..." required pattern="[A-Za-z_\-0-9\.]+@[A-Za-z_\-0-9\.]+\.[A-Za-z_\-0-9\.]+">
 	    </div>
 	    <div class="col-12 col-md-3">
-	      <button type="submit" class="btn btn-block btn-lg btn-primary" disabled>Join us!</button>
+	      <button type="submit" class="btn btn-block btn-lg btn-primary">Join us!</button>
 	    </div>
 	  </div>
 	</form>

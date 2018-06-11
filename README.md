@@ -1,4 +1,5 @@
-# bmoreblacktechies.github.io
+<html style="background-color: blue;">
+# bmoreblacktechies.github.io #
 The Bmore Black Techies website!
 
 
@@ -19,4 +20,4 @@ install the required gems with `bundle install`.
 
 To run the site locally, run `bundle exec jekyll serve`.
 
-We use Github Pull Requests to contribute.
+We use Github Pull Requests to contribute.</html>

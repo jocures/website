@@ -1,41 +1,8 @@
 $(document).ready(function() {
 
 	// Credentials
-	var baseUrl = "https://api.api.ai/v1/query?v=20160910&";
+	var baseUrl = "https://api.dialogflow.com/v1/query?v=20150910&";
 	var accessToken = "3bee9d97d6a84e09a54ee084dbe9d243";
-
-	//---------------------------------- Add dynamic html bot content(Widget style) ----------------------------
-	// You can also add the html content in html page and still it will work!
-	var mybot = '<div class="chatCont" id="chatCont">'+
-								'<div class="bot_profile">'+
-									'<img src="img/techielogowhite.png" class="bot_p_img">'+
-									'<div class="close">'+
-										'<i class="fa fa-times" aria-hidden="true"></i>'+
-									'</div>'+
-								'</div><!--bot_profile end-->'+
-								'<div id="result_div" class="resultDiv"></div>'+
-								'<div class="chatForm" id="chat-div">'+
-									'<div class="spinner">'+
-										'<div class="bounce1"></div>'+
-										'<div class="bounce2"></div>'+
-										'<div class="bounce3"></div>'+
-									'</div>'+
-									'<input type="text" id="chat-input" autocomplete="off" placeholder="Try typing here"'+ 'class="form-control bot-txt"/>'+
-								'</div>'+
-							'</div><!--chatCont end-->'+
-
-							'<div class="profile_div">'+
-								'<div class="row">'+
-									'<div class="col-hgt">'+
-										'<img src="img/techielogowhite.png" class="img-circle img-profile">'+
-									'</div><!--col-hgt end-->'+
-									'<div class="col-hgt">'+
-										'<div class="chat-txt">'+
-											'Chat with us now!'+
-										'</div>'+
-									'</div><!--col-hgt end-->'+
-								'</div><!--row end-->'+
-							'</div><!--profile_div end-->';
 
 	$("mybot").html(mybot);
 
@@ -123,7 +90,7 @@ $(document).ready(function() {
 			// data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 			success: function(data) {
 				main(data);
-				// console.log(data);
+				console.log(data);
 			},
 			error: function(e) {
 				console.log (e);
