@@ -3,6 +3,36 @@ $(document).ready(function() {
 	// Credentials
 	var baseUrl = "https://api.dialogflow.com/v1/query?v=20150910&";
 	var accessToken = "3bee9d97d6a84e09a54ee084dbe9d243";
+	var mybot = 
+    '<div class="chatCont" id="chatCont">'+
+    '<div class="bot_profile">'+ 
+        '<img src="/img/techielogowhite.png" class="bot_p_img">'+ 
+        '<div class="close">'+ 
+            '<i class="fa fa-times" aria-hidden="true"></i>'+ 
+        '</div>'+ 
+    '</div>'+ 
+    '<div id="result_div" class="resultDiv"></div>'+ 
+    '<div class="chatForm" id="chat-div">'+ 
+        '<div class="spinner">'+ 
+            '<div class="bounce1"></div>'+ 
+            '<div class="bounce2"></div>'+ 
+            '<div class="bounce3"></div>'+ 
+        '</div>'+ 
+        '<input type="text" id="chat-input" autocomplete="off" placeholder="Try typing here" '+ 'class="form-control bot-txt" />'+ 
+    '</div>'+ 
+    '</div>'+ 
+
+    '<div class="profile_div">'+ 
+        '<div class="row">'+ 
+            '<div class="col-hgt">'+ 
+                '<img src="/img/techielogowhite.png" class="img-circle img-profile">'+ 
+            '</div>'+ 
+            '<div class="col-hgt">'+ 
+                '<div class="chat-txt">'+ 'Chat with us now!'+ 
+                '</div>'+ 
+            '</div>'+ 
+        '</div>'+ 
+    '</div>'
 
 	$("mybot").html(mybot);
 
@@ -77,7 +107,7 @@ $(document).ready(function() {
 	});
 
 
-	//------------------------------------------- Send request to Dialog Flow ---------------------------------------
+	//------------------------------------------- Send request to API.ai ---------------------------------------
 	function send(text) {
 		$.ajax({
 			type: "GET",
@@ -103,7 +133,7 @@ $(document).ready(function() {
 	function main(data) {
 		var action = data.result.action;
 		var speech = data.result.fulfillment.speech;
-		// use incomplete if u use required in Dialog Flow questions in intent
+		// use incomplete if u use required in API.AI questions in intent
 		// check if actionIncomplete = false
 		var incomplete = data.result.actionIncomplete;
 		if(data.result.fulfillment.messages) { // check if messages are there
@@ -112,16 +142,16 @@ $(document).ready(function() {
 			}
 		}
 		switch(action) {
-			// case 'your.action': // set in Dialog Flow
+			// case 'your.action': // set in API.ai
 			// Perform operation/json api call based on action
 			// Also check if (incomplete = false) if there are many required parameters in an intent
-			// if(suggestions) { // check if quick replies are there in Dialog Flow
+			// if(suggestions) { // check if quick replies are there in API.ai
 			//   addSuggestion(suggestions);
 			// }
 			// break;
 			default:
 				setBotResponse(speech);
-				if(suggestions) { // check if quick replies are there in Dialog Flow
+				if(suggestions) { // check if quick replies are there in API.ai
 					addSuggestion(suggestions);
 				}
 				break;
@@ -189,7 +219,7 @@ $(document).ready(function() {
 		}, 1000);
 	}
 
-	// on click of suggestions get value and send to Dialog Flow
+	// on click of suggestions get value and send to API.ai
 	$(document).on("click", ".suggestion span", function() {
 		var text = this.innerText;
 		setUserResponse(text);
